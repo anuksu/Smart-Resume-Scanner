@@ -1,0 +1,310 @@
+/* Hiring Form Page - Scoped styles */
+.hf-container {
+  min-height: 100vh;
+  background: #faf9f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+}
+
+.hf-page {
+  width: 100%;
+}
+
+/* Hero */
+.hf-hero {
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 2rem 3.5rem;
+}
+
+.hf-hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hf-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hf-hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Content */
+.hf-content {
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+/* Form Card */
+.hf-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+.hf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Sections */
+.hf-section {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.hf-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hf-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hf-section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #0078d4;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hf-section-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #323130;
+  margin: 0;
+}
+
+/* Form Fields */
+.hf-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hf-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.hf-form-row .hf-form-group {
+  margin-bottom: 0;
+}
+
+.hf-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #323130;
+}
+
+.hf-form-group input,
+.hf-form-group select,
+.hf-form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+  background: #ffffff;
+  transition: border-color 0.167s ease;
+}
+
+.hf-form-group input:focus,
+.hf-form-group select:focus,
+.hf-form-group textarea:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+.hf-form-group textarea {
+  resize: vertical;
+}
+
+.hf-form-group select {
+  cursor: pointer;
+}
+
+.hf-field-hint {
+  font-size: 0.8rem;
+  color: #a19f9d;
+  margin-top: 0.2rem;
+}
+
+/* Optional Toggle */
+.hf-optional-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0078d4;
+  transition: all 0.167s ease;
+  margin-bottom: 1.5rem;
+}
+
+.hf-optional-toggle:hover {
+  background: #f3f2f1;
+}
+
+.hf-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #0078d4;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.hf-optional-section {
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.hf-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hf-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.167s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.hf-btn-primary {
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+  flex: 1;
+}
+
+.hf-btn-primary:hover {
+  background: #106ebe;
+}
+
+.hf-btn-outline {
+  background: #ffffff;
+  color: #0078d4;
+  border: 1px solid #0078d4;
+}
+
+.hf-btn-outline:hover {
+  background: #f3f2f1;
+}
+
+/* Success Card */
+.hf-success-card {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+.hf-success-icon {
+  color: #107c10;
+  margin-bottom: 1.5rem;
+}
+
+.hf-success-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.hf-success-card > p {
+  font-size: 0.95rem;
+  color: #605e5c;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hf-success-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hf-hero h2 {
+    font-size: 2rem;
+  }
+
+  .hf-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .hf-form-card {
+    padding: 1.5rem;
+  }
+
+  .hf-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hf-form-actions {
+    flex-direction: column;
+  }
+
+  .hf-success-actions {
+    flex-direction: column;
+  }
+
+  .hf-optional-section {
+    padding: 1.5rem;
+  }
+}

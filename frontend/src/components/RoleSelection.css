@@ -1,0 +1,151 @@
+/* Role Selection Page - Scoped styles */
+.role-container {
+  min-height: 100vh;
+  background: #faf9f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.role-page {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.role-hero {
+  margin-bottom: 3rem;
+}
+
+.role-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.role-subtitle {
+  font-size: 1.1rem;
+  color: #605e5c;
+}
+
+/* Cards */
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.role-card {
+  background: #ffffff;
+  border: 2px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.role-card:hover {
+  border-color: #0078d4;
+  box-shadow: 0 8px 24px rgba(0, 120, 212, 0.15);
+  transform: translateY(-4px);
+}
+
+.role-icon {
+  color: #0078d4;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #f3f2f1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.role-card:hover .role-icon {
+  background: #0078d4;
+  color: #ffffff;
+}
+
+.role-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.role-card > p {
+  font-size: 0.95rem;
+  color: #605e5c;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.role-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+
+.role-features li {
+  color: #605e5c;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.role-features li::before {
+  content: '✓';
+  color: #107c10;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.role-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.167s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin-top: auto;
+  width: 100%;
+}
+
+.role-btn-primary {
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+}
+
+.role-btn-primary:hover {
+  background: #106ebe;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .role-cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .role-hero h2 {
+    font-size: 2rem;
+  }
+}

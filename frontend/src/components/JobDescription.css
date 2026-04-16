@@ -1,0 +1,477 @@
+/* Job Description Page - Scoped styles, matches App.css */
+.jd-container {
+  min-height: 100vh;
+  background: #faf9f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+}
+
+.jd-page {
+  width: 100%;
+}
+
+/* Hero */
+.jd-hero {
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  padding: 4.5rem 2rem 4rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.jd-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.jd-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.jd-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.jd-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.jd-hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Content */
+.jd-content {
+  width: 100%;
+  padding: 2.5rem 0 4rem;
+}
+
+/* Form Card */
+.jd-form-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #edebe9;
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 6.4px 14.4px rgba(0, 0, 0, 0.07), 0 1.2px 3.6px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+}
+
+.jd-form-card:hover {
+  box-shadow: 0 6.4px 14.4px rgba(0, 0, 0, 0.1), 0 1.2px 3.6px rgba(0, 0, 0, 0.06);
+}
+
+.jd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Instructions */
+.jd-instructions {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, #f0f6ff 0%, #e8f4fd 100%);
+  border: 1px solid #c7e0f4;
+  border-left: 4px solid #0078d4;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.jd-instruction-icon {
+  color: #0078d4;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  background: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 120, 212, 0.15);
+}
+
+.jd-instruction-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #004578;
+  margin-bottom: 0.5rem;
+}
+
+.jd-instruction-text ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.jd-instruction-text li {
+  font-size: 0.9rem;
+  color: #605e5c;
+  padding: 0.3rem 0;
+  line-height: 1.6;
+}
+
+/* Form Group */
+.jd-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jd-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #323130;
+}
+
+.jd-form-group textarea {
+  padding: 1rem;
+  border: 1px solid #d2d0ce;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+  background: #faf9f8;
+  transition: all 0.2s ease;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.jd-form-group textarea:hover {
+  border-color: #a19f9d;
+  background: #ffffff;
+}
+
+.jd-form-group textarea:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+  background: #ffffff;
+}
+
+.jd-char-count {
+  font-size: 0.8rem;
+  color: #a19f9d;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* Tips */
+.jd-tips {
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, #f6fdf6 0%, #dff6dd 100%);
+  border: 1px solid #a7e3a5;
+  border-left: 4px solid #107c10;
+  border-radius: 8px;
+}
+
+.jd-tips h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #107c10;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.jd-tips ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.jd-tips li {
+  font-size: 0.9rem;
+  color: #605e5c;
+  padding: 0.3rem 0;
+  line-height: 1.6;
+}
+
+/* Actions */
+.jd-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.jd-btn {
+  padding: 0.85rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.jd-btn-primary {
+  background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+  color: #ffffff;
+  border: none;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0, 120, 212, 0.35);
+}
+
+.jd-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #106ebe 0%, #004578 100%);
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.45);
+  transform: translateY(-1px);
+}
+
+.jd-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.jd-btn-primary:disabled {
+  background: #d2d0ce;
+  color: #a19f9d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.jd-btn-outline {
+  background: #ffffff;
+  color: #0078d4;
+  border: 1px solid #0078d4;
+}
+
+.jd-btn-outline:hover {
+  background: #f0f6ff;
+  border-color: #005a9e;
+}
+
+/* Success Card */
+.jd-success-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+.jd-success-icon {
+  color: #107c10;
+  margin-bottom: 1.5rem;
+}
+
+.jd-success-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.jd-success-card > p {
+  font-size: 0.95rem;
+  color: #605e5c;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Preview */
+.jd-preview {
+  background: #f3f2f1;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.jd-preview h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.jd-preview-content {
+  font-size: 0.85rem;
+  color: #605e5c;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Progress */
+.jd-progress {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f0f6ff;
+  border-radius: 8px;
+  border: 1px solid #c7e0f4;
+}
+
+.jd-progress-bar {
+  height: 6px;
+  background: #e1dfdd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.jd-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0078d4, #00bcf2);
+  border-radius: 3px;
+  animation: jd-loading 3s ease-in-out;
+}
+
+@keyframes jd-loading {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.jd-progress p {
+  font-size: 0.9rem;
+  color: #0078d4;
+  font-weight: 500;
+}
+
+/* Results Card */
+.jd-results-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+.jd-results-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.jd-results-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-top: 1rem;
+}
+
+/* Score Grid */
+.jd-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.jd-score-item {
+  text-align: center;
+  padding: 1rem;
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+}
+
+.jd-score-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.jd-score-good {
+  color: #107c10;
+}
+
+.jd-score-medium {
+  color: #ca5010;
+}
+
+.jd-score-label {
+  font-size: 0.8rem;
+  color: #605e5c;
+  font-weight: 600;
+}
+
+/* Suggestions */
+.jd-suggestions {
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.jd-suggestions h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.jd-suggestions ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.jd-suggestions li {
+  font-size: 0.9rem;
+  color: #605e5c;
+  padding: 0.3rem 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jd-hero h2 {
+    font-size: 2rem;
+  }
+
+  .jd-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .jd-form-card {
+    padding: 1.5rem;
+  }
+
+  .jd-instructions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .jd-actions {
+    flex-direction: column;
+  }
+
+  .jd-score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jd-results-card {
+    padding: 1.5rem;
+  }
+}

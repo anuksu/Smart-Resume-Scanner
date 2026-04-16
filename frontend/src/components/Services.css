@@ -1,0 +1,362 @@
+/* Services Page - Scoped styles, does NOT override App.css */
+.services-container {
+  min-height: 100vh;
+  background: #faf9f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+  line-height: 1.5;
+}
+
+.services-page {
+  width: 100%;
+}
+
+/* Hero */
+.services-hero {
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 2rem 3.5rem;
+  position: relative;
+}
+
+.services-hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.services-hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Content */
+.services-content {
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.services-section {
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.services-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.services-section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.services-desc {
+  font-size: 1.1rem;
+  color: #605e5c;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* Service Cards Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0078d4;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 10px 18px;
+  text-align: center;
+  background: #f3f2f1;
+  border-radius: 50px;
+}
+
+.service-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: #605e5c;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  color: #605e5c;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '✓';
+  color: #107c10;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.pricing-card-popular {
+  border: 2px solid #0078d4;
+  box-shadow: 0 4px 16px rgba(0, 120, 212, 0.2);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0078d4;
+  color: #ffffff;
+  padding: 0.25rem 1rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.pricing-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1dfdd;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #323130;
+  line-height: 1;
+}
+
+.period {
+  font-size: 1rem;
+  color: #605e5c;
+}
+
+.pricing-tagline {
+  font-size: 0.9rem;
+  color: #605e5c;
+  margin: 0;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  flex: 1;
+}
+
+.pricing-features li {
+  color: #323130;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid #f3f2f1;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  content: '✓';
+  color: #107c10;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.167s cubic-bezier(0.1, 0.9, 0.2, 1);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin-top: auto;
+}
+
+.pricing-btn-primary {
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+}
+
+.pricing-btn-primary:hover {
+  background: #106ebe;
+}
+
+.pricing-btn-outline {
+  background: #ffffff;
+  color: #0078d4;
+  border: 1px solid #0078d4;
+}
+
+.pricing-btn-outline:hover {
+  background: #f3f2f1;
+}
+
+/* FAQ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+.faq-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: #605e5c;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero h2 {
+    font-size: 2rem;
+  }
+
+  .services-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}

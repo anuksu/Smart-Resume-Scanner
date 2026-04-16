@@ -1,40 +1,58 @@
-# Resume Scanner API - Backend
+# Smart Resume Scanner
 
-Python FastAPI backend for the Smart Resume Scanner. Uses Mistral OCR to extract text from resumes and matches them against job descriptions.
+AI-powered resume analysis tool that helps users optimize their resumes to pass any ATS (Applicant Tracking System) — from the dumbest keyword scanners to smart AI-based screening.
+
+## Project Structure
+
+```
+├── backend/          # FastAPI Python backend
+│   ├── database/     # Supabase database modules
+│   ├── routes/       # API endpoints (analyze, auth, profile, contact)
+│   ├── services/     # AI service, OCR, parsers, experience calculator
+│   ├── main.py       # FastAPI app entry point
+│   └── requirements.txt
+├── frontend/         # React TypeScript frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/   # UI components
+│   │   ├── App.tsx
+│   │   └── index.tsx
+│   ├── package.json
+│   └── tsconfig.json
+└── README.md
+```
+
+## Features
+
+- **Resume-to-JD Matching** — Upload resume + paste job description → get detailed match analysis
+- **Experience Calculator** — Programmatically computes total work experience from resume dates
+- **ATS-Optimized Skills** — Generates a copy-paste ready flat skills section that passes any ATS
+- **Education Matching** — Semantic matching for related fields + ATS coaching for degree formatting
+- **Missing Keywords** — Flags missing keywords with copy-paste examples for each section
+- **Rewrite Suggestions** — Improves weak bullet points with JD keywords and metrics
+- **Summary Generator** — Creates a tailored professional summary with explicit experience duration
+
+## Tech Stack
+
+- **Backend**: Python, FastAPI, OpenAI GPT-4o-mini, Mistral OCR
+- **Frontend**: React, TypeScript
+- **Database**: Supabase (PostgreSQL + Auth + Storage)
 
 ## Setup
 
+### Backend
 ```bash
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate  # macOS/Linux
-
-# Install dependencies
+cd backend
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-
-# Run server
+# Create .env with OPENAI_API_KEY, MISTRAL_API_KEY, SUPABASE_URL, SUPABASE_KEY, SUPABASE_SERVICE_ROLE_KEY
 python main.py
 ```
 
-Server runs at `http://localhost:8000`
-
-## API Endpoints
-
-### `POST /api/analyze`
-Upload a resume + job description, get full match analysis.
-- **resume** (file): PDF or image file
-- **job_description** (form field): Job description text
-
-### `POST /api/extract-text`
-Extract text from a resume using Mistral OCR.
-- **resume** (file): PDF or image file
-
-### `GET /`
-Health check.
-
-## Environment Variables
-Create a `.env` file:
-```
-MISTRAL_API_KEY=your_key_here
-PORT=8000
+### Frontend
+```bash
+cd frontend
+npm install
+npm start
 ```

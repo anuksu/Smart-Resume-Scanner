@@ -1,0 +1,417 @@
+/* Resume Upload Page - Scoped styles */
+.ru-container {
+  min-height: 100vh;
+  background: #faf9f8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #323130;
+}
+
+.ru-page {
+  width: 100%;
+}
+
+/* Hero */
+.ru-hero {
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 2rem 3.5rem;
+}
+
+.ru-hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ru-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.ru-hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Content */
+.ru-content {
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.ru-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Upload Card */
+.ru-upload-card {
+  background: #ffffff;
+  border: 1px solid #d2d0ce;
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.132), 0 0.3px 0.9px rgba(0, 0, 0, 0.108);
+}
+
+/* Dropzone */
+.ru-dropzone {
+  border: 2px dashed #d2d0ce;
+  border-radius: 4px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #faf9f8;
+}
+
+.ru-dropzone:hover {
+  border-color: #0078d4;
+  background: #f3f9fd;
+}
+
+.ru-dragging {
+  border-color: #0078d4;
+  background: #e8f4fd;
+}
+
+.ru-drop-icon {
+  color: #0078d4;
+  margin-bottom: 1rem;
+}
+
+.ru-dropzone h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.5rem;
+}
+
+.ru-drop-formats {
+  font-size: 0.85rem;
+  color: #605e5c;
+  margin-bottom: 1rem;
+}
+
+.ru-drop-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ru-drop-divider::before,
+.ru-drop-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d2d0ce;
+}
+
+.ru-drop-divider span {
+  font-size: 0.85rem;
+  color: #a19f9d;
+  font-weight: 500;
+}
+
+.ru-browse-btn {
+  display: inline-block;
+  background: #0078d4;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.167s ease;
+}
+
+.ru-browse-btn:hover {
+  background: #106ebe;
+}
+
+/* Files List */
+.ru-files-list {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e1dfdd;
+  padding-top: 1.5rem;
+}
+
+.ru-files-list h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 1rem;
+}
+
+.ru-file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.ru-file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ru-file-icon {
+  color: #0078d4;
+}
+
+.ru-file-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ru-file-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #323130;
+}
+
+.ru-file-size {
+  font-size: 0.8rem;
+  color: #a19f9d;
+}
+
+.ru-file-remove {
+  background: none;
+  border: none;
+  color: #a19f9d;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.167s ease;
+}
+
+.ru-file-remove:hover {
+  background: #fde7e9;
+  color: #d13438;
+}
+
+/* Actions */
+.ru-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ru-analyze-btn {
+  flex: 1;
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.167s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.ru-analyze-btn:hover:not(:disabled) {
+  background: #106ebe;
+}
+
+.ru-analyze-btn:disabled {
+  background: #d2d0ce;
+  color: #a19f9d;
+  cursor: not-allowed;
+}
+
+.ru-back-btn {
+  background: #ffffff;
+  color: #0078d4;
+  border: 1px solid #0078d4;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.167s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.ru-back-btn:hover {
+  background: #f3f2f1;
+}
+
+/* Progress */
+.ru-progress {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.ru-progress-bar {
+  height: 4px;
+  background: #e1dfdd;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.ru-progress-fill {
+  height: 100%;
+  background: #0078d4;
+  border-radius: 2px;
+  animation: ru-loading 3s ease-in-out;
+}
+
+@keyframes ru-loading {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.ru-progress p {
+  font-size: 0.9rem;
+  color: #605e5c;
+}
+
+/* Results */
+.ru-results {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e1dfdd;
+  padding-top: 1.5rem;
+}
+
+.ru-results-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #107c10;
+  margin-bottom: 1rem;
+}
+
+.ru-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ru-score-item {
+  text-align: center;
+  padding: 1rem;
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+}
+
+.ru-score-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.ru-score-good {
+  color: #107c10;
+}
+
+.ru-score-medium {
+  color: #ca5010;
+}
+
+.ru-score-label {
+  font-size: 0.8rem;
+  color: #605e5c;
+  font-weight: 600;
+}
+
+.ru-suggestions {
+  background: #faf9f8;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.ru-suggestions h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 0.75rem;
+}
+
+.ru-suggestions ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.ru-suggestions li {
+  font-size: 0.9rem;
+  color: #605e5c;
+  padding: 0.3rem 0;
+  line-height: 1.5;
+}
+
+/* Next Actions */
+.ru-next-actions {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1dfdd;
+  text-align: center;
+}
+
+.ru-next-btn {
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.167s ease;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.ru-next-btn:hover {
+  background: #106ebe;
+}
+
+.ru-next-hint {
+  font-size: 0.85rem;
+  color: #a19f9d;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ru-hero h2 {
+    font-size: 2rem;
+  }
+
+  .ru-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .ru-upload-card {
+    padding: 1.5rem;
+  }
+
+  .ru-score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ru-actions {
+    flex-direction: column;
+  }
+
+  .ru-analyze-btn,
+  .ru-back-btn {
+    width: 100%;
+  }
+}
