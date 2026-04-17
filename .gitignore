@@ -1,20 +1,14 @@
-# Root
+# Environment
 .env
+
+# Python
 __pycache__/
 *.pyc
+venv/
+.venv/
 
-# Backend
-backend/.env
-backend/__pycache__/
-backend/*.pyc
-backend/.venv/
-backend/venv/
+# Uploads
 backend/uploads/
-
-# Frontend
-frontend/node_modules/
-frontend/.env
-frontend/build/
 
 # OS
 .DS_Store
