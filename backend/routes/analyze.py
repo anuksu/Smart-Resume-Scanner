@@ -19,6 +19,7 @@ from database.certifications import add_certification
 from services.resume_parser import parse_resume
 from services.jd_parser import parse_job_description
 from services.experience_calculator import calculate_total_experience
+from services.skill_validator import validate_skills
 
 router = APIRouter()
 
@@ -209,14 +210,24 @@ async def analyze_resume(
                 if jd_skills and company_jd_id:
                     save_company_skills(user_id, company_jd_id, jd_skills)
 
-                # Save skill validations (AI match results)
-                skills = results.get("skills", [])
-                skill_data = [
-                    {"skill_name": s.get("name", ""), "match": s.get("match", False)}
-                    for s in skills if s.get("name")
-                ]
-                if skill_data and company_jd_id:
-                    save_skill_validations(user_id, company_jd_id, skill_data)
+                # Structured skill validation: compare user skills vs company skills
+                user_skill_names = parsed.get("skills", []) if parsed else []
+                if user_skill_names and jd_skills and company_jd_id:
+                    try:
+                        skill_validation_result = validate_skills(user_skill_names, jd_skills, experience=computed_exp)
+                        skill_matches = skill_validation_result.get("skill_matches", [])
+                        if skill_matches:
+                            save_skill_validations(user_id, company_jd_id, skill_matches)
+                        results["skill_validation"] = skill_validation_result
+                    except Exception:
+                        # Fallback: save basic match data from AI analysis
+                        skills = results.get("skills", [])
+                        skill_data = [
+                            {"company_skill": s.get("name", ""), "match": s.get("match", False), "match_type": "exact" if s.get("match") else "missing"}
+                            for s in skills if s.get("name")
+                        ]
+                        if skill_data:
+                            save_skill_validations(user_id, company_jd_id, skill_data)
 
                 # Save full JD validation (AI analysis results)
                 if company_jd_id:

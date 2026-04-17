@@ -12,16 +12,19 @@ from database.db import get_supabase
 def save_skill_validations(user_id: str, company_jobdescription_id: str,
                            skills: list[dict]) -> list[dict]:
     """
-    Save skill validation results after AI analysis.
-    skills: list of {"skill_name": str, "match": bool}
+    Save skill validation results after structured skill comparison.
+    skills: list of {"company_skill": str, "user_skill": str|None, "match": bool, "match_type": str, "note": str|None}
     """
     supabase = get_supabase()
     data = [
         {
             "user_id": user_id,
             "company_jobdescription_id": company_jobdescription_id,
-            "skill_name": s["skill_name"],
+            "skill_name": s.get("company_skill", s.get("skill_name", "")),
             "match": s.get("match", False),
+            "match_type": s.get("match_type", "missing"),
+            "user_skill": s.get("user_skill"),
+            "note": s.get("note"),
         }
         for s in skills
     ]
