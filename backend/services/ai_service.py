@@ -112,30 +112,12 @@ IMPORTANT RULES:
 17. SKILLS ATS COACHING — Dumb ATS systems do exact keyword scanning. For EACH JD skill, check these issues:
     a) HIDDEN IN PARENTHESES: If a skill exists in the resume but is buried inside parentheses (e.g., "Microsoft Azure (App Services, Storage Blobs)"), add a missingKeywords entry telling the user to list it as a standalone item. ATS often skips content inside parentheses. Example: suggest adding "Azure App Services" and "Azure Storage Blobs" as separate skills.
     b) BUNDLED PHRASES: If skills are written as descriptions instead of keywords (e.g., "LLM-based OCR and automation solutions"), suggest breaking them into standalone keywords: "LLM", "OCR", "Automation". ATS scans for individual keywords, not sentences.
-    c) ABBREVIATION vs FULL FORM: ALWAYS include BOTH the abbreviation AND the full form for EVERY skill that has one. This is critical — different JDs and ATS systems search for different forms. Common examples:
-       - LLM → "Large Language Models (LLM)"
-       - ML → "Machine Learning (ML)"
-       - AI → "Artificial Intelligence (AI)"
-       - JS → "JavaScript (JS)"
-       - TS → "TypeScript (TS)"
-       - CI/CD → "CI/CD (Continuous Integration/Continuous Deployment)"
-       - NLP → "Natural Language Processing (NLP)"
-       - CV → "Computer Vision (CV)"
-       - RAG → "Retrieval-Augmented Generation (RAG)"
-       - OCR → "Optical Character Recognition (OCR)"
-       - API → "API (Application Programming Interface)"
-       - SQL → "SQL (Structured Query Language)"
-       - OOP → "Object-Oriented Programming (OOP)"
-       - AWS → "Amazon Web Services (AWS)"
-       - GCP → "Google Cloud Platform (GCP)"
-       - K8s → "Kubernetes (K8s)"
-       - DL → "Deep Learning (DL)"
-       - BI → "Business Intelligence (BI)"
-       - ETL → "ETL (Extract, Transform, Load)"
-       - ERP → "ERP (Enterprise Resource Planning)"
-       - DAX → "DAX (Data Analysis Expressions)"
-       - MCP → "MCP (Model Context Protocol)"
-       Apply this to ALL abbreviations found in the resume or JD — not just the examples above. If a skill has a known abbreviation or full form, ALWAYS include both. We do NOT want to take any chance of the user getting rejected.
+    c) ABBREVIATION vs FULL FORM: For EVERY skill in the resume and JD, check if it has a commonly known abbreviation OR full form. If it does, ALWAYS include BOTH in the suggested skills section. Format: "Full Form (Abbreviation)" — e.g., "Machine Learning (ML)".
+       - If the resume or JD uses an abbreviation (e.g., "ML"), expand it to full form + abbreviation: "Machine Learning (ML)"
+       - If the resume or JD uses a full form (e.g., "Machine Learning"), add the abbreviation too: "Machine Learning (ML)"
+       - This applies to ANY field — tech, finance, healthcare, marketing, legal, etc. You are an expert in all industries. Use your knowledge to identify abbreviations dynamically.
+       - Do NOT limit yourself to a fixed list. Detect abbreviations from context. If the JD says "CRM" in a sales role, expand to "Customer Relationship Management (CRM)". If it says "HIPAA" in healthcare, expand to "Health Insurance Portability and Accountability Act (HIPAA)".
+       - We do NOT want to take any chance of the user getting rejected by any ATS.
     d) SLASHES AND SEPARATORS: Skills like "AI / ML / LLM" with spaces around slashes may not match "AI/ML" or "Machine Learning". Suggest writing each as a separate keyword: "AI", "ML", "Machine Learning", "LLM".
     e) SKILLS FORMAT: If the resume uses paragraph-style or category-based skills (e.g., "Programming & web: Java, Python..."), add a formatTip suggesting a flat, ATS-friendly format — a simple comma-separated list under a "Skills" or "Technical Skills" heading with no category labels. Category labels confuse some ATS parsers.
     f) JD EXACT PHRASING: For each skill, use the JD's EXACT wording. If JD says "CI/CD pipelines", suggest "CI/CD pipelines" not just "CI/CD". If JD says "cloud computing", suggest "cloud computing" not just "Azure".
