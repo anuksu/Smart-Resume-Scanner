@@ -215,19 +215,35 @@ async def analyze_resume(
                 if user_skill_names and jd_skills and company_jd_id:
                     try:
                         skill_validation_result = validate_skills(user_skill_names, jd_skills, experience=computed_exp)
+                        results["skill_validation"] = skill_validation_result
                         skill_matches = skill_validation_result.get("skill_matches", [])
                         if skill_matches:
-                            save_skill_validations(user_id, company_jd_id, skill_matches)
-                        results["skill_validation"] = skill_validation_result
+                            try:
+                                save_skill_validations(user_id, company_jd_id, skill_matches)
+                            except Exception:
+                                pass  # DB save can fail if schema not updated yet
                     except Exception:
                         # Fallback: save basic match data from AI analysis
+                        results["skill_validation"] = {
+                            "user_skills": user_skill_names,
+                            "company_skills": jd_skills,
+                            "comparison_table": [],
+                            "skill_matches": [],
+                            "summary": {"total_company_skills": len(jd_skills), "exact_matches": 0, "semantic_matches": 0, "partial_matches": 0, "missing": len(jd_skills), "match_percentage": 0},
+                            "skills_to_add": [],
+                            "ats_optimized_skills": "",
+                            "suggestions": [],
+                        }
                         skills = results.get("skills", [])
                         skill_data = [
                             {"company_skill": s.get("name", ""), "match": s.get("match", False), "match_type": "exact" if s.get("match") else "missing"}
                             for s in skills if s.get("name")
                         ]
                         if skill_data:
-                            save_skill_validations(user_id, company_jd_id, skill_data)
+                            try:
+                                save_skill_validations(user_id, company_jd_id, skill_data)
+                            except Exception:
+                                pass
 
                 # Save full JD validation (AI analysis results)
                 if company_jd_id:

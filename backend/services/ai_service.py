@@ -34,7 +34,8 @@ Return ONLY valid JSON (no markdown, no code fences) with this exact structure:
     "required": "<what JD asks, e.g. 'Bachelor's in CS'>",
     "resume": "<what resume shows>",
     "match": <true/false>,
-    "applicable": <true/false>
+    "applicable": <true/false>,
+    "ats_optimized": "<ATS-friendly rewrite of ALL degrees from the resume. Rules: (1) Expand ALL abbreviations: MS→'Master of Science (MS)', BS→'Bachelor of Science (BS)', MBA→'Master of Business Administration (MBA)', PhD→'Doctor of Philosophy (PhD)', B.Tech→'Bachelor of Technology (B.Tech)', etc. (2) Add JD keywords in parentheses if the degree field is related but uses different wording, e.g. 'Master of Science (MS) in Software Engineering (Computer Science & Engineering)'. (3) List ALL degrees separated by ' | '. (4) This must be copy-paste ready for the user's resume. Example: 'Master of Science (MS) in Software Engineering (Computer Science & Engineering) | Master of Business Administration (MBA) in Finance | Bachelor of Science (BS) in Statistics'>"
   }},
   "location": {{
     "required": "<JD location or Remote/Hybrid/On-site>",
@@ -71,7 +72,7 @@ Return ONLY valid JSON (no markdown, no code fences) with this exact structure:
   "resumeUpdateGuide": {{
     "summary": {{
       "current": "<user's current summary/objective if found, or 'Not found'>",
-      "suggested": "<rewritten professional summary tailored to this JD. MUST start with the candidate's role and explicitly state their total experience (e.g. 'Results-driven AI/ML Engineer with 1 year of experience in...'). Use key JD terms. 3-4 sentences.>"
+      "suggested": "<STRONG 4-sentence professional summary the user can copy-paste into their resume. Rules: Sentence 1: Start with a power word + job title + rounded experience (round UP: 11 months='1+ year', 23 months='2+ years', 7 months='6+ months') + core expertise from JD. Sentence 2: Key technical skills and tools from the JD that the user actually has. Sentence 3: Soft skills, work style, and achievements that align with JD responsibilities. Sentence 4: Goal statement mentioning the company name (if known) and the value the candidate brings. Use JD keywords naturally. Make it sound confident, not generic. This must be ATS-friendly and impressive for human reviewers too.>"
     }},
     "skillsToAdd": {{
       "technical": ["<technical skill from JD missing in resume>"],
