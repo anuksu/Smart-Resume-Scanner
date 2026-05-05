@@ -1,15 +1,15 @@
 import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "backend"))
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
 from routes.analyze import router as analyze_router
 from routes.auth import router as auth_router
 from routes.profile import router as profile_router
 from routes.contact import router as contact_router
-
-load_dotenv()
 
 app = FastAPI(title="Resume Scanner API", version="1.0.0")
 
